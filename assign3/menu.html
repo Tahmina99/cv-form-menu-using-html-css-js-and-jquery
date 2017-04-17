@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+<style>
+.dropdown-submenu {
+    position: relative;
+	background-color:#FF00FF;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+	background-color:#1D73B6;
+}
+body{
+background-color:#A6A6A6;}
+h3{
+color:green;
+
+}
+.container{
+margin-top:20px;
+background-color:#C39C3C;
+height:400px;
+width;600px;
+
+}
+.btn btn-default dropdown-toggle
+{
+color:#C39C3C;
+}
+</style>
+</head>
+<body>
+  
+<div class="container">
+  
+   <h3>Menu Slider Using HTML,CSS,Jquery.</h3> <br>                            
+  <div class="dropdown" style="float:left">
+    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Home
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">About Us <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Mission</a></li>
+          <li><a tabindex="-1" href="#">Vision</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+  </div>
+             
+  <div class="dropdown" style="float:left">
+    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Departments
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">UG <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Applied Math</a></li>
+          <li><a tabindex="-1" href="#">CSTE</a></li>
+		  <li><a tabindex="-1" href="#">Pharmacy</a></li>
+			</ul>
+			<a class="test" tabindex="-1" href="#">PG <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">M.E CSTE</a></li>
+          <li><a tabindex="-1" href="#">M.Sc Math</a></li>
+		  
+			</ul>
+      </li>
+    </ul>
+  </div>
+    <div class="dropdown" style="float:left">
+    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Contact Us
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Location <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">noakhali</a></li>
+          <li><a tabindex="-1" href="#">luxmipur</a></li>
+		  <li><a tabindex="-1" href="#">comilla</a></li>
+			</ul>
+			<a class="test" tabindex="-1" href="#">Contact Details <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">phn number</a></li>
+          <li><a tabindex="-1" href="#">home address</a></li>
+		  
+			</ul>
+      </li>
+    </ul>
+  </div>     
+
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+</body>
+</html>
